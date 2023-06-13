@@ -1,0 +1,38 @@
+export const products = [
+  {
+    id: 1,
+    title: "Polo",
+    price: 15000,
+    stock: 2,
+    description: "Estas son las mejores camisas",
+    category: "Elegante",
+    img: "https://res.cloudinary.com/dgfdymixa/image/upload/v1686408575/Mens_Corporate_Shirt_Long_Sleeve_Float_Navy_aeqm1a.jpg",
+  },
+  {
+    id: 2,
+    title: "Devre",
+    price: 14500,
+    stock: 5,
+    description: "liviana maximo confort",
+    category: "Sport",
+    img: "https://res.cloudinary.com/dgfdymixa/image/upload/v1686408702/skog_shirt_m_81353-356-021_a_main_fjr_ai0lph.jpg",
+  },
+  {
+    id: 3,
+    title: "Polo",
+    price: 19000,
+    stock: 6,
+    description: "especial para una noche de gala",
+    category: "Elegante",
+    img: "https://res.cloudinary.com/dgfdymixa/image/upload/v1686408829/PR-G3-9573-PINTORANCHYY-BLUE-FANCY-SOLID-BLUE-1__15522_toq4bp.png",
+  },
+  {
+    id: 4,
+    title: "Devre",
+    price: 17800,
+    stock: 5,
+    description: "100% algodon",
+    category: "Sport",
+    img: "https://res.cloudinary.com/dgfdymixa/image/upload/v1686408646/40018_980_01-1_lza8jt.webp",
+  },
+];

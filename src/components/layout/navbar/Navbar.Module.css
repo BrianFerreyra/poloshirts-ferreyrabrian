@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  background-color: aqua;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navlinks {
+  display: flex;
+  list-style: none;
+}
+a {
+  padding: 10px;
+}
