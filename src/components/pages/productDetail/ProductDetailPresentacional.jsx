@@ -1,14 +1,43 @@
+import Swal from "sweetalert2";
+import { ItemCount } from "../../common/productCard/ItemCount";
 import "./ProductDetail.Module.css";
-const ProductDetailPresentacional = ({ productSelected }) => {
+const ProductDetailPresentacional = ({
+  productSelected,
+  addCart,
+  cantidad,
+}) => {
+  const onAdd = (cantidad) => {
+    let data = {
+      ...productSelected,
+      quantity: cantidad,
+    };
+
+    addCart(data);
+
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Your work has been saved",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
   return (
-    <div className="body">
-      <div className="card">
-        <h1>{productSelected.title}</h1>
-        <img src={productSelected.img} height="500px" />
-        <h3>{productSelected.description}</h3>
-        <h2>{productSelected.price}</h2>
+    <>
+      <div>
+        <h2>{productSelected.title}</h2>
+        <img src={productSelected.img} alt="" />
       </div>
-    </div>
+      {productSelected.stock > 0 ? (
+        <ItemCount
+          stock={productSelected.stock}
+          initial={cantidad}
+          onAdd={onAdd}
+        />
+      ) : (
+        <h3>no hay stock</h3>
+      )}
+    </>
   );
 };
 

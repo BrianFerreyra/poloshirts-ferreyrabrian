@@ -5,7 +5,7 @@ const ProductsListPresentacional = ({ item }) => {
   return (
     <div className="itemlist">
       {item.map((elemento) => {
-        return <ProductCard key={elemento.key} elemento={elemento} />;
+        return <ProductCard key={elemento.id} elemento={elemento} />;
       })}
     </div>
   );

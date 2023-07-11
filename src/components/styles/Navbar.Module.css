@@ -3,8 +3,8 @@
   margin: 0;
   padding: 0;
 }
-.navbar {
-  background-color: aqua;
+.navBar {
+  background-color: rgb(24, 192, 192);
   width: 100%;
   display: flex;
   justify-content: space-between;
