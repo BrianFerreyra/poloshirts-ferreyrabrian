@@ -1,0 +1,31 @@
+.card {
+  background-color: #d9dade;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+.imgCard {
+  padding: 10px;
+  height: 300px;
+  width: 250px;
+  background-color: white;
+  border-radius: 5px 5px 0px 0px;
+}
+.infoCard {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  padding: 10px;
+}
+.detailButton {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: aliceblue;
+  margin: 5px;
+  padding: 5px;
+  background-color: #95040b;
+  border-style: solid;
+  border-radius: 5px;
+  border-block-color: #420306;
+}

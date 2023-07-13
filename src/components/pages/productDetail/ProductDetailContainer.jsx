@@ -5,6 +5,7 @@ import { CartContext } from "../../../context/CartContext";
 import { RingLoader } from "react-spinners";
 import { database } from "../../../firebaseConfig";
 import { collection, getDoc, doc } from "firebase/firestore";
+import "./ProductDetail.Module.css";
 useParams;
 const ProductDetailContainer = () => {
   const [productSelected, setProductSelect] = useState({});
@@ -23,17 +24,30 @@ const ProductDetailContainer = () => {
     });
   }, [id]);
 
+  if (productSelected === 0) {
+    return (
+      <div
+        style={{
+          width: "100%",
+          height: "90vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          background: "#131313",
+        }}
+      >
+        <RingLoader color="red" width={40} height={111} />
+      </div>
+    );
+  }
+
   return (
     <div>
-      {productSelected.id ? (
-        <ProductDetailPresentacional
-          cantidad={cantidad}
-          productSelected={productSelected}
-          addCart={addCart}
-        />
-      ) : (
-        <RingLoader color="red" />
-      )}
+      <ProductDetailPresentacional
+        cantidad={cantidad}
+        productSelected={productSelected}
+        addCart={addCart}
+      />
     </div>
   );
 };

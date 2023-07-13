@@ -37,37 +37,41 @@ const CartContextProvider = ({ children }) => {
 
   const clearCart = () => {
     Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
+      title: "¿Seguro que quieres vaciar el carrito?",
+      text: "tendras que volver a llenarlo de forma manual",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonText: "Si, vaciar",
     }).then((result) => {
       if (result.isConfirmed) {
         setCart([]);
         localStorage.removeItem("cart");
-        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+        Swal.fire("Borrado", "El carrito a sido vaciado", "success");
       }
     });
   };
 
   const removeById = (id) => {
     Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
+      title: "¿Seguro que quieres eliminar el producto?",
+      text: "tendras que volver a llenarlo de forma manual",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonText: "Si, borrar",
     }).then((result) => {
       if (result.isConfirmed) {
         let newArray = cart.filter((product) => product.id !== id);
         setCart(newArray);
         localStorage.setItem("cart", JSON.stringify(newArray));
-        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+        Swal.fire(
+          "Borrado",
+          "El producto fue eliminado del carrito",
+          "success"
+        );
       }
     });
   };

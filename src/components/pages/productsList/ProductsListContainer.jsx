@@ -33,19 +33,27 @@ const ProductsListContainer = () => {
       .catch((err) => console.log(err));
   }, [categoryName]);
 
-  const loaderRing = {
-    display: "block",
-    color: "red",
-    backgroundColor: "black",
-  };
+  if (item.length === 0) {
+    return (
+      <div
+        style={{
+          width: "100%",
+          height: "90vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          background: "#131313",
+        }}
+      >
+        <RingLoader color="red" width={40} height={111} />
+      </div>
+    );
+  }
 
   return (
     <div>
-      {item.length > 0 ? (
-        <ProductsListPresentacional item={item} />
-      ) : (
-        <RingLoader cssOverride={loaderRing} color="red" />
-      )}
+      {/* <AgregarDocs /> */}
+      <ProductsListPresentacional item={item} />
     </div>
   );
 };

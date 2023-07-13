@@ -4,16 +4,23 @@
   padding: 0;
 }
 .navBar {
-  background-color: rgb(24, 192, 192);
+  background-color: #0c0304;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 .navlinks {
   display: flex;
   list-style: none;
 }
 a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  color: aliceblue;
   padding: 10px;
+  text-decoration: none;
+  margin: 15px;
 }

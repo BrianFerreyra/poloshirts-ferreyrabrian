@@ -6,7 +6,7 @@
 .itemlist {
   width: 100%;
   height: 100vh;
-  background-color: aquamarine;
+  background-color: #131313;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

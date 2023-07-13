@@ -17,27 +17,40 @@ const ProductDetailPresentacional = ({
     Swal.fire({
       position: "top-end",
       icon: "success",
-      title: "Your work has been saved",
+      title: "Se agrego al carrito",
       showConfirmButton: false,
       timer: 1500,
     });
   };
+
   return (
-    <>
-      <div>
-        <h2>{productSelected.title}</h2>
-        <img src={productSelected.img} alt="" />
+    <div className="blockProduct">
+      <div className="imgInfo">
+        <img className="imgProduct" src={productSelected.img}></img>
+        <div className="InfoCounter">
+          <div className="infoProduct">
+            <h1 className="titleProduct">{productSelected.title}</h1>
+            <h2 className="priceProduct">Precio: ${productSelected.price}</h2>
+            <h3 className="stockProduct">Stock: {productSelected.stock}</h3>
+          </div>
+          <div className="counterProduct">
+            {productSelected.stock > 0 ? (
+              <ItemCount
+                stock={productSelected.stock}
+                initial={cantidad}
+                onAdd={onAdd}
+              />
+            ) : (
+              <h1 className="nonStockAlert">no hay stock</h1>
+            )}
+          </div>
+        </div>
       </div>
-      {productSelected.stock > 0 ? (
-        <ItemCount
-          stock={productSelected.stock}
-          initial={cantidad}
-          onAdd={onAdd}
-        />
-      ) : (
-        <h3>no hay stock</h3>
-      )}
-    </>
+      <div className="descriptionProductBlock">
+        <h2>Description:</h2>
+        <div className="descriptionProduct">{productSelected.description}</div>
+      </div>
+    </div>
   );
 };
 

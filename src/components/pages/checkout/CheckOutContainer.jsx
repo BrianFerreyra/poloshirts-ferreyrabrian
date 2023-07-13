@@ -5,6 +5,7 @@ import { database } from "../../../firebaseConfig";
 import { collection, addDoc, updateDoc, doc } from "firebase/firestore";
 import { useContext, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
+import "./CheckOut.Module.css";
 
 const CheckOutContainer = () => {
   const { cart, totalPrice, clearCart } = useContext(CartContext);
