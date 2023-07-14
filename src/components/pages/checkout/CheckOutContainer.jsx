@@ -8,7 +8,7 @@ import { CartContext } from "../../../context/CartContext";
 import "./CheckOut.Module.css";
 
 const CheckOutContainer = () => {
-  const { cart, totalPrice } = useContext(CartContext);
+  const { cart, totalPrice, clearCart } = useContext(CartContext);
   const [orderId, setOrderId] = useState(null);
   let total = totalPrice();
   const { handleSubmit, handleChange, errors } = useFormik({
@@ -32,6 +32,7 @@ const CheckOutContainer = () => {
           stock: product.stock - product.quantity,
         });
       });
+      clearCart();
     },
     validateOnChange: false,
     validationSchema: Yup.object({

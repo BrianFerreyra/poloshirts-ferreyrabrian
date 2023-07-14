@@ -1,6 +1,22 @@
 # Polo-Shirts
 
-Este es un ecommerce de camisas
+Este es un ecommerce de venta de camisas
+
+# Ejemplo de navegacion basica:
+
+![Alt text](<Navegacion basica.gif>)
+
+# Simulacion de compra:
+
+![Alt text](simulacionCompra.gif)
+
+# Chequeo de orden en Firebase/firestore:
+
+![Alt text](FirestoreOrder.gif)
+
+# Enlace Vercel:
+
+https://poloshirts-ferreyrabrian.vercel.app/
 
 # Herramientas utilizadas
 
@@ -14,3 +30,4 @@ Este es un ecommerce de camisas
 - YUP
 - Vercel
 - FireBase
+- Google Fonts

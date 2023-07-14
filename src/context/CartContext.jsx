@@ -36,21 +36,8 @@ const CartContextProvider = ({ children }) => {
   };
 
   const clearCart = () => {
-    Swal.fire({
-      title: "¿Seguro que quieres vaciar el carrito?",
-      text: "tendras que volver a llenarlo de forma manual",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Si, vaciar",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        setCart([]);
-        localStorage.removeItem("cart");
-        Swal.fire("Borrado", "El carrito a sido vaciado", "success");
-      }
-    });
+    setCart([]);
+    localStorage.removeItem("cart");
   };
 
   const removeById = (id) => {
