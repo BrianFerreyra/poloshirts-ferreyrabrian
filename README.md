@@ -31,3 +31,21 @@ https://poloshirts-ferreyrabrian.vercel.app/
 - Vercel
 - FireBase
 - Google Fonts
+
+# Variables de entorno:
+
+VITE_API_KEY=AIzaSyCuq0dyvmgO_EVZh0NJyy7l1iSE_3iyxew
+VITE_AUTH_DOMAIN=proyectreactcoder.firebaseapp.com
+VITE_PROYECT_ID=proyectreactcoder
+VITE_STORAGE_BUCKET=proyectreactcoder.appspot.com
+VITE_MESSAGING=65196386794
+VITE_APP_ID=1:65196386794:web:3a3142deefa30e5686aa93
+
+# Firebase Config:
+
+apiKey: import.meta.env.VITE_API_KEY,
+authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+projectId: import.meta.env.VITE_PROYECT_ID,
+storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+messagingSenderId: import.meta.env.VITE_MESSAGING,
+appId: import.meta.env.VITE_APP_ID,
