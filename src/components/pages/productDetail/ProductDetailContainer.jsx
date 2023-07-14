@@ -6,16 +6,34 @@ import { database } from "../../../firebaseConfig";
 import { collection, getDoc, doc } from "firebase/firestore";
 import "./ProductDetail.Module.css";
 import { RingLoader } from "react-spinners";
+import Swal from "sweetalert2";
 
 useParams;
 const ProductDetailContainer = () => {
   const [productSelected, setProductSelect] = useState({});
 
-  const { addCart, getQuantityById, onAdd } = useContext(CartContext);
+  const { addCart, getQuantityById } = useContext(CartContext);
 
   const { id } = useParams();
 
   const cantidad = getQuantityById(id);
+
+  const onAdd = (cantidad) => {
+    let database = {
+      ...productSelected,
+      quantity: cantidad,
+    };
+
+    addCart(database);
+
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Se agrego al carrito",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
 
   useEffect(() => {
     let itemCollection = collection(database, "products");

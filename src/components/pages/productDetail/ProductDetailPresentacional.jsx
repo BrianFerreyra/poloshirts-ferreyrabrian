@@ -1,29 +1,7 @@
-import Swal from "sweetalert2";
 import { ItemCount } from "../../common/productCard/ItemCount";
 import "./ProductDetail.Module.css";
 
-const ProductDetailPresentacional = ({
-  productSelected,
-  addCart,
-  cantidad,
-}) => {
-  const onAdd = (cantidad) => {
-    let data = {
-      ...productSelected,
-      quantity: cantidad,
-    };
-
-    addCart(data);
-
-    Swal.fire({
-      position: "top-end",
-      icon: "success",
-      title: "Se agrego al carrito",
-      showConfirmButton: false,
-      timer: 1500,
-    });
-  };
-
+const ProductDetailPresentacional = ({ productSelected, cantidad, onAdd }) => {
   return (
     <div className="blockProduct">
       <div className="imgInfo">
