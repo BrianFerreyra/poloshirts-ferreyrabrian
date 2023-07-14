@@ -9,10 +9,6 @@
 }
 .cardBlock {
   width: 70%;
-  border-style: outset;
-  border-radius: 5px;
-  border-width: 1px;
-  border-color: #95040b;
   margin: 20px;
 }
 .cardProduct {
@@ -90,7 +86,7 @@
   border-color: #95040b;
 }
 .spanEmpty {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 100px;
   background-color: #2c3230;
   color: aliceblue;

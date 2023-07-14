@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import { ItemCount } from "../../common/productCard/ItemCount";
 import "./ProductDetail.Module.css";
+
 const ProductDetailPresentacional = ({
   productSelected,
   addCart,
@@ -35,13 +36,20 @@ const ProductDetailPresentacional = ({
           </div>
           <div className="counterProduct">
             {productSelected.stock > 0 ? (
-              <ItemCount
-                stock={productSelected.stock}
-                initial={cantidad}
-                onAdd={onAdd}
-              />
+              <div
+                style={{
+                  display: "grid",
+                  justifyContent: "center",
+                }}
+              >
+                <ItemCount
+                  stock={productSelected.stock}
+                  initial={cantidad}
+                  onAdd={onAdd}
+                />
+              </div>
             ) : (
-              <h1 className="nonStockAlert">no hay stock</h1>
+              <h2>No hay stock</h2>
             )}
           </div>
         </div>

@@ -1,3 +1,4 @@
+import "./Counter.Module.css";
 import Counter from "./Counter";
 import { useState } from "react";
 

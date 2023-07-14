@@ -2,15 +2,16 @@ import ProductDetailPresentacional from "./ProductDetailPresentacional";
 import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
-import { RingLoader } from "react-spinners";
 import { database } from "../../../firebaseConfig";
 import { collection, getDoc, doc } from "firebase/firestore";
 import "./ProductDetail.Module.css";
+import { RingLoader } from "react-spinners";
+
 useParams;
 const ProductDetailContainer = () => {
   const [productSelected, setProductSelect] = useState({});
 
-  const { addCart, getQuantityById } = useContext(CartContext);
+  const { addCart, getQuantityById, onAdd } = useContext(CartContext);
 
   const { id } = useParams();
 
@@ -24,30 +25,29 @@ const ProductDetailContainer = () => {
     });
   }, [id]);
 
-  if (productSelected === 0) {
-    return (
-      <div
-        style={{
-          width: "100%",
-          height: "90vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          background: "#131313",
-        }}
-      >
-        <RingLoader color="red" width={40} height={111} />
-      </div>
-    );
-  }
-
   return (
     <div>
-      <ProductDetailPresentacional
-        cantidad={cantidad}
-        productSelected={productSelected}
-        addCart={addCart}
-      />
+      {productSelected.id ? (
+        <ProductDetailPresentacional
+          cantidad={cantidad}
+          productSelected={productSelected}
+          addToCart={addCart}
+          onAdd={onAdd}
+        />
+      ) : (
+        <div
+          style={{
+            backgroundColor: "#131313",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+            height: "100vh",
+          }}
+        >
+          <RingLoader width={40} height={111} color="red" />
+        </div>
+      )}
     </div>
   );
 };

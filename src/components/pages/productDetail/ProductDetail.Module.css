@@ -23,12 +23,15 @@
   justify-content: center;
 }
 .infoProduct {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Kanit", sans-serif;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .titleProduct {
+  font-family: "Kanit", sans-serif;
+
   padding: 20px;
 }
 .priceProduct {
@@ -38,7 +41,8 @@
   padding: 20px;
 }
 .descriptionProductBlock {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Kanit", sans-serif;
+
   display: flex;
   flex-direction: column;
   align-items: center;

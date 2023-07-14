@@ -1,0 +1,27 @@
+.NumContador {
+  font-family: "Kanit", sans-serif;
+}
+.sumarButton {
+  height: fit-content;
+  align-self: self-end;
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+  color: aliceblue;
+  background-color: #131313;
+  padding: 5px;
+  border-radius: 5px;
+  border-color: #95040b;
+  margin: 10px;
+}
+.restarButton {
+  height: fit-content;
+  align-self: self-end;
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+  color: aliceblue;
+  background-color: #131313;
+  padding: 5px;
+  border-radius: 5px;
+  border-color: #95040b;
+  margin: 10px;
+}

@@ -13,7 +13,7 @@
 .cardProduct {
   border-style: outset;
   border-radius: 5px;
-  border-width: 1px;
+  border-width: 5px;
   border-color: #95040b;
   margin: 20px;
 }

@@ -17,10 +17,23 @@
   list-style: none;
 }
 a {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20px;
+  font-family: "Kanit", sans-serif;
+  font-size: 30px;
   color: aliceblue;
   padding: 10px;
   text-decoration: none;
   margin: 15px;
+}
+.logo {
+  height: 150px;
+  filter: brightness(100%);
+}
+.nombre {
+  font-family: "Kanit", sans-serif;
+  color: aliceblue;
+}
+.isologo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

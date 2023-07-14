@@ -1,10 +1,13 @@
 .card {
-  background-color: #d9dade;
+  background-color: #2c3230;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 10px;
+  color: aliceblue;
+  border-style: outset;
+  border-color: #420306;
 }
 .imgCard {
   padding: 10px;
@@ -14,17 +17,17 @@
   border-radius: 5px 5px 0px 0px;
 }
 .infoCard {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Kanit", sans-serif;
+
   text-align: center;
   padding: 10px;
 }
 .detailButton {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
+  font-family: "Kanit", sans-serif;
   color: aliceblue;
   margin: 5px;
   padding: 5px;
-  background-color: #95040b;
+  background-color: #131313;
   border-style: solid;
   border-radius: 5px;
   border-block-color: #420306;
