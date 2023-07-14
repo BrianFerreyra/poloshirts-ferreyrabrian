@@ -50,7 +50,9 @@ const CheckOutContainer = () => {
   return (
     <div>
       {orderId ? (
-        <h1>su compra fue exitosa {orderId}</h1>
+        <h1 className="order">
+          ¡su compra fue exitosa! Su Orden de compra: {orderId}
+        </h1>
       ) : (
         <CheckOut
           handleSubmit={handleSubmit}
